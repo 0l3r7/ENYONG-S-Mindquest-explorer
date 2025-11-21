@@ -31,38 +31,39 @@ function Home() {
 
     
   return (
-    <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 ">
+    <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 relative z-0">
 
  
         {/* Buttons row */}
         <div className="flex flex-row justify-between w-full  items-start">
+           
             {/* About button */}
-            <Link to="/about">
             <img
             src={infoPic}
             alt="info"
             className="w-[50px] h-12 cursor-pointer" // about button size to
+            onClick={() => navigate("/about", { state: { backgroundLocation: location } })}
             />
-            </Link>
+           
 
             {/* Account & Settings buttons */}
             
             <div className="flex flex-row gap-4">
-           <Link to="/account">
-            <img
-                src={accPic}
-                alt="account"
-                className="w-[50px] h-12 cursor-pointer" // account button size to
-            />
-           </Link>
+                <Link to="/account">
+                    <img
+                        src={accPic}
+                        alt="account"
+                        className="w-[50px] h-12 cursor-pointer" // account button size to
+                    />
+                </Link>
 
-            
-            <img
-                src={settingPic}
-                alt="settings"
-                className="w-[50px] h-12 cursor-pointer" // setting button size
-                onClick={() => navigate("/setting", { state: { backgroundLocation: location } })}
-            />
+                    {/*  Settings buttons */}
+                    <img
+                        src={settingPic}
+                        alt="settings"
+                        className="w-[50px] h-12 cursor-pointer" // setting button size
+                        onClick={() => navigate("/setting", { state: { backgroundLocation: location } })}
+                    />
             
             </div>
         </div>
