@@ -14,12 +14,10 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-     {/* this one is for 1v1 */}
-    const [showPartnerBtn, setShowPartnerBtn] = useState(false);
-    {/* this one is for earn coin */}
-    const [showEarnCoinBtn, setShowEarnCoinBtn] = useState(false);
-    {/* this one is for Level and quarter */}
-    const [showLevelQuarterBtn, setShowLevelQuarterBtn] = useState(false);
+     {/* Control STATE for Dropdown Options */}
+    const [showPartnerBtn, setShowPartnerBtn] = useState(false); //play with player
+    const [showEarnCoinBtn, setShowEarnCoinBtn] = useState(false); //Earn  coin
+    const [showLevelQuarterBtn, setShowLevelQuarterBtn] = useState(false);// Level & quarter
 
   return (
     <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 ">
