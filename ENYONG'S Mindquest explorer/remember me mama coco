@@ -1,3 +1,6 @@
 cd "D:\ENYONG-S-Mindquest-explorer-main\ENYONG'S Mindquest explorer"
+<<<<<<< HEAD
  npm install
  npm run dev
+=======
+>>>>>>> f7e81848dde6ec645aa6aa58bc8502c553805b70
