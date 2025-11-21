@@ -1,5 +1,5 @@
 import './Home.css';
-import React from 'react';
+import React, { useState } from 'react';
 import infoPic from '../ButtonPIC/info.png';
 import accPic from '../ButtonPIC/acc.png';
 import settingPic from '../ButtonPIC/setting.png';
@@ -9,9 +9,14 @@ import coinPic from '../PIC/coin.png'
 import plusPic from '../PIC/plus icon.png'
 import depedPic from '../PIC/DepEd.png'
 import minigamepic from '../PIC/MiniGameLogo.png'
+import playPic from '../ButtonPIC/PlayBtn.png'
 import { Link } from 'react-router-dom';
 
 function Home() {
+
+     {/* this one is for 1v1 */}
+    const [showPartnerBtn, setShowPartnerBtn] = useState(false);
+
   return (
     <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 ">
 
@@ -23,7 +28,7 @@ function Home() {
             <img
             src={infoPic}
             alt="info"
-            className="w-[50px] h-12" // about button size to
+            className="w-[50px] h-12 cursor-pointer" // about button size to
             />
             </Link>
 
@@ -34,7 +39,7 @@ function Home() {
             <img
                 src={accPic}
                 alt="account"
-                className="w-[50px] h-12" // account button size to
+                className="w-[50px] h-12 cursor-pointer" // account button size to
             />
            </Link>
 
@@ -42,7 +47,7 @@ function Home() {
             <img
                 src={settingPic}
                 alt="settings"
-                className="w-[50px] h-12" // setting button size
+                className="w-[50px] h-12 cursor-pointer" // setting button size
             />
             </Link>
             </div>
@@ -92,7 +97,7 @@ function Home() {
                 <img
                     src={plusPic}
                     alt="plus"
-                    className="w-8 h-8 mt-1"
+                    className="w-8 h-8 mt-1 cursor-pointer"
                 />
                 </div>
 
@@ -115,27 +120,55 @@ function Home() {
              />
 
              {/* Play Button */}
-             <button className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl w-[191px] h-[52px] shadow-inner shadow-black/80">
+             <button className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl w-[191px] h-[52px]  shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] cursor-pointer">
               PLAY
             </button>
 
         </div>
 
         {/* Mini Games*/}
-        <div className='bg-[#021934] flex justify-center items-center flex-col rounded-3xl p-2 w-[373px] h-[174px] gap-5'>
+        <div className='bg-[#021934] flex justify-center items-center flex-col rounded-3xl p-2 w-[373px] h-auto gap-5'>
             {/* Mini Game Logo */}
            <img
             src={minigamepic}
             alt="minigamelogo"
-            className="w-[220px] h-[59px] items-center justify-center " // about button size to
+            className="w-[220px] h-[59px] items-center justify-center " 
              />
             {/* PWP | EC | LAQ buttons */}
             <div className='font-LG text-white flex justify-center gap-1'>
-                <button className='bg-[#0A5090] text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl'>PLAY WITH <br /> PARTNER</button>
+                <button 
+                    onClick={() => setShowPartnerBtn(!showPartnerBtn)}
+                    className={`
+                        text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl transition cursor-pointer
+                        ${showPartnerBtn 
+                        ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
+                        : "bg-[#0A5090]"
+                        } `}
+                    >
+                    PLAY WITH <br /> PARTNER
+                </button>
+
+
                 <button className='bg-[#0A5090] text-sm px-10 p-1 '>Earn <br /> Coins</button>
                 <button className='bg-[#0A5090] text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl'>PLAY WITH <br /> PARTNER</button>
             </div>
 
+ 
+            {/* EXPANDING DROPDOWN 1v1 */}
+            <div className={`
+                w-full flex flex-col items-center overflow-hidden transition-all duration-300
+                ${showPartnerBtn ? "max-h-40 " : "max-h-0"}`}>
+                <div className=" w-[90%] rounded-xl p-3 flex flex-col gap-3 items-center justify-center " >
+
+                    <h1 className='font-LG text-white text-center'>Scan a QR code to challenge a friend in a quiz battle.</h1>
+                     <img
+                        src={playPic} 
+                        alt="playpicbtn"
+                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        />
+
+                </div>
+            </div>
         </div>
 
     </div>
