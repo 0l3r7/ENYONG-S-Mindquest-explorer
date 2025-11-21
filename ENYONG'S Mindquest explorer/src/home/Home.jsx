@@ -16,11 +16,15 @@ function Home() {
 
      {/* this one is for 1v1 */}
     const [showPartnerBtn, setShowPartnerBtn] = useState(false);
+    {/* this one is for earn coin */}
+    const [showEarnCoinBtn, setShowEarnCoinBtn] = useState(false);
+    {/* this one is for Level and quarter */}
+    const [showLevelQuarterBtn, setShowLevelQuarterBtn] = useState(false);
 
   return (
     <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 ">
 
-
+ 
         {/* Buttons row */}
         <div className="flex flex-row justify-between w-full  items-start">
             {/* About button */}
@@ -127,17 +131,22 @@ function Home() {
         </div>
 
         {/* Mini Games*/}
-        <div className='bg-[#021934] flex justify-center items-center flex-col rounded-3xl p-2 w-[373px] h-auto gap-5'>
+        <div className='bg-[#021934] flex justify-center items-center flex-col rounded-3xl p-2 w-[373px] h-auto gap-2'>
             {/* Mini Game Logo */}
            <img
             src={minigamepic}
             alt="minigamelogo"
-            className="w-[220px] h-[59px] items-center justify-center " 
-             />
+            className="w-[220px] h-[59px] items-center justify-center mt-2 "  />
+
             {/* PWP | EC | LAQ buttons */}
             <div className='font-LG text-white flex justify-center gap-1'>
+
+                 {/* PWP buttons */}
                 <button 
-                    onClick={() => setShowPartnerBtn(!showPartnerBtn)}
+                    onClick={() => {setShowPartnerBtn(!showPartnerBtn)
+                                    setShowEarnCoinBtn(false) 
+                                    setShowLevelQuarterBtn(false)}}  
+                                    // ec CLOSE when pwp is clicked
                     className={`
                         text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl transition cursor-pointer
                         ${showPartnerBtn 
@@ -148,9 +157,37 @@ function Home() {
                     PLAY WITH <br /> PARTNER
                 </button>
 
+                 {/* EC  buttons */}
+                <button 
+                    onClick={() => {setShowEarnCoinBtn(!showEarnCoinBtn)
+                                    setShowPartnerBtn(false)
+                                     setShowLevelQuarterBtn(false) }}
+                                     // PWP CLOSE when EC is clicked
+                    className={`
+                        text-sm px-10 p-1 transition cursor-pointer
+                        ${showEarnCoinBtn 
+                        ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
+                        : "bg-[#0A5090]"
+                        } `}
+                    >
+                    Earn <br /> Coins
+                </button>
 
-                <button className='bg-[#0A5090] text-sm px-10 p-1 '>Earn <br /> Coins</button>
-                <button className='bg-[#0A5090] text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl'>PLAY WITH <br /> PARTNER</button>
+                {/* LAQ  buttons */}
+                <button 
+                    onClick={() => {setShowLevelQuarterBtn(!showLevelQuarterBtn)
+                                    setShowPartnerBtn(false) 
+                                    setShowEarnCoinBtn(false) }}
+                                     // PWP CLOSE when EC is clicked
+                    className={`
+                         text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl transition cursor-pointer
+                        ${showLevelQuarterBtn 
+                        ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
+                        : "bg-[#0A5090]"
+                        } `}>
+                    LEVEL AND <br /> QUARTER
+                </button>
+
             </div>
 
  
@@ -163,12 +200,45 @@ function Home() {
                     <h1 className='font-LG text-white text-center'>Scan a QR code to challenge a friend in a quiz battle.</h1>
                      <img
                         src={playPic} 
-                        alt="playpicbtn"
+                        alt="play1v1btn"
                         className="w-[50px] h-[49px] cursor-pointer" // play button size to
                         />
 
                 </div>
             </div>
+
+            {/* EXPANDING DROPDOWN Earn Coin */}
+            <div className={`
+                w-full flex flex-col items-center overflow-hidden transition-all duration-300
+                ${showEarnCoinBtn ? "max-h-40 " : "max-h-0"}`}>
+                <div className=" w-[90%] rounded-xl p-3 flex flex-col gap-3 items-center justify-center " >
+
+                    <h1 className='font-LG text-white text-center'>Answer fun questions to collect more coins and unlock rewards.</h1>
+                     <img
+                        src={playPic} 
+                        alt="playECbtn"
+                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        />
+
+                </div>
+            </div>
+
+            {/* EXPANDING DROPDOWN Level and quarter */}
+            <div className={`
+                w-full flex flex-col items-center overflow-hidden transition-all duration-300
+                ${showLevelQuarterBtn ? "max-h-40 " : "max-h-0"}`}>
+                <div className=" w-[90%] rounded-xl p-3 flex flex-col gap-3 items-center justify-center " >
+
+                    <h1 className='font-LG text-white text-center'>Replay lesson-based games by level and quarter to review and improve.</h1>
+                     <img
+                        src={playPic} 
+                        alt="playLAQbtn"
+                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        />
+
+                </div>
+            </div>
+
         </div>
 
     </div>
