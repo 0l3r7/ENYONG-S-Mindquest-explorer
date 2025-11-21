@@ -58,7 +58,7 @@ function Home() {
         </div>
 
         {/* Button Second Row */}
-        <div className="flex justify-center mb-10 ">
+        <div className="flex justify-center mb-2 ">
             <div className="flex flex-row items-center gap-4">
                 
                 <div className='flex flex-row mb-5'>
@@ -109,7 +109,7 @@ function Home() {
         </div>
         
         {/* Level and title and Play*/}
-        <div className='flex justify-center items-center flex-col mb-10'>
+        <div className='flex justify-center items-center flex-col mb-5'>
 
             {/* Level */}
             <h1 className='flex justify-center font-LG text-2xl text-white mr-4'>
