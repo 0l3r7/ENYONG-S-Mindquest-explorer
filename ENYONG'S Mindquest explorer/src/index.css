@@ -1,0 +1,10 @@
+@font-face {
+    font-family: luckiestGUY;
+    src: url("../src/assets/font/LuckiestGuy-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme{
+    --font-LG:luckiestGUY, "sans-serif"
+}
