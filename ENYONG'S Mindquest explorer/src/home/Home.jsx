@@ -141,7 +141,7 @@ function Home() {
                     className={`
                         text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl transition cursor-pointer
                         ${showPartnerBtn 
-                        ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]" 
+                        ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
                         : "bg-[#0A5090]"
                         } `}
                     >
@@ -162,7 +162,7 @@ function Home() {
 
                     <h1 className='font-LG text-white text-center'>Scan a QR code to challenge a friend in a quiz battle.</h1>
                      <img
-                        src={playPic}
+                        src={playPic} 
                         alt="playpicbtn"
                         className="w-[50px] h-[49px] cursor-pointer" // play button size to
                         />
