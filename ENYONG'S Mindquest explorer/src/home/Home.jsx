@@ -153,7 +153,7 @@ function Home() {
                 <button className='bg-[#0A5090] text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl'>PLAY WITH <br /> PARTNER</button>
             </div>
 
-
+ 
             {/* EXPANDING DROPDOWN 1v1 */}
             <div className={`
                 w-full flex flex-col items-center overflow-hidden transition-all duration-300
