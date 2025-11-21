@@ -1,25 +1,33 @@
 import './App.css';
-
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from './home/Home';
-
-import Accounts from './home/accountPage/account';
-import About from './home/aboutPage/about'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Settings from './home/settingPage/setting.jsx';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {/* Default route (opens Home when the app loads) */}
-        <Route path="/" element={<Home />} />
+  const location = useLocation();
+  const state = location.state;
 
-        {/* Account page */}
-        <Route path="/account" element={<Accounts />} />
-         {/* About page */}
-        <Route path="/about" element={<About />} />
+  return (
+    <>
+      {/* Always render Home, even if modal is open */}
+      <Routes location={state?.backgroundLocation || location}>
+        <Route path="/" element={<Home />} />
       </Routes>
-    </BrowserRouter>
+
+      {/* Modal route */}
+      {state?.backgroundLocation && (
+        <Routes>
+          <Route path="/setting" element={<Settings />} />
+        </Routes>
+      )}
+    </>
   );
 }
 
-export default App;
+export default function AppWrapper() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}

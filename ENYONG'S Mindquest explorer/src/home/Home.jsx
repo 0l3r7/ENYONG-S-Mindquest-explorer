@@ -1,5 +1,8 @@
 import './Home.css';
 import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
+
 import infoPic from '../ButtonPIC/info.png';
 import accPic from '../ButtonPIC/acc.png';
 import settingPic from '../ButtonPIC/setting.png';
@@ -11,27 +14,18 @@ import depedPic from '../PIC/DepEd.png'
 import minigamepic from '../PIC/MiniGameLogo.png'
 import playPic from '../ButtonPIC/PlayBtn.png'
 
-import closePic from '../ButtonPIC/close.png'
-import soundPic from '../ButtonPIC/soundBtn.png'
-import musicPic from '../ButtonPIC/musicBtn.png'
-import vibratePic from '../ButtonPIC/vibrateBtn.png'
-
-import { Link } from 'react-router-dom';
 
 function Home() {
+
+    {/* use to navigate to settings */}
+    const navigate = useNavigate();
+    const location = useLocation();
+
 
      {/* Control STATE for Dropdown Options */}
     const [showPartnerBtn, setShowPartnerBtn] = useState(false); //play with player
     const [showEarnCoinBtn, setShowEarnCoinBtn] = useState(false); //Earn  coin
     const [showLevelQuarterBtn, setShowLevelQuarterBtn] = useState(false);// Level & quarter
-
-    {/* POP-UP setting Control state  */}
-    const [showSettingsBtn, setShowSettingsBtn] = useState(false);// setting pop-up buttons
-
-    {/* POP-UP setting Control state  */}
-    const [soundOn, setSoundOn] = useState(true);
-    const [musicOn, setMusicOn] = useState(true);
-    const [vibrateOn, setVibrateOn] = useState(true);
 
 
 
@@ -67,7 +61,7 @@ function Home() {
                 src={settingPic}
                 alt="settings"
                 className="w-[50px] h-12 cursor-pointer" // setting button size
-                onClick={()=> setShowSettingsBtn(true)}
+                onClick={() => navigate("/setting", { state: { backgroundLocation: location } })}
             />
             
             </div>
@@ -259,68 +253,7 @@ function Home() {
 
         </div>
 
-         {/* Setting Popup */} 
-            {
-            showSettingsBtn &&
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/50  z-50">
-               
-               <div className='bg-[#084E99] rounded-xl w-[368px] h-[216px] items-center  '>
-                    <div className="relative bg-[#012F65] rounded-xl p-6 flex flex-row items-center justify-center gap-5  ">
-                        <h1 className='font-LG text-white text-3xl'>Settings</h1>
-                        <img 
-                        src={closePic} 
-                        alt="CloseButton" 
-                        className='absolute right-4 cursor-pointer'
-                        onClick={() => setShowSettingsBtn(false)}/>
-                    </div>
 
-                    <div className=' flex flex-row items-center justify-center gap-10 p-4'>
-                        {/* sound Popup button */} 
-                        <div className='relative cursor-pointer'
-                             onClick={() => setSoundOn(!soundOn)}>
-                            <img 
-                            src={soundPic} 
-                            alt="SoundButton" 
-                            className=''
-                            />
-                            {!soundOn && (
-                            <div className="absolute  bg-amber-400 pt-px top-1/2 left-1/2 w-full border-t-4 border-red-500 rotate-45 -translate-x-8 -translate-y-6"></div>
-                            )}
-                        </div>
-
-                        {/* Music Popup button*/} 
-                        <div className='relative cursor-pointer'
-                             onClick={() => setMusicOn(!musicOn)}>
-                            <img 
-                            src={musicPic} 
-                            alt="MusicButton" 
-                            className='cursor-pointer'
-                            />
-                            {!musicOn && (
-                            <div className="absolute bg-amber-400 pt-px  top-1/2 left-1/2 w-full border-t-4 border-red-500 rotate-45 -translate-x-8 -translate-y-6"></div>
-                            )}
-                        </div>
-                        
-
-                        {/* Vibrate Popup button*/} 
-                        <div className='relative cursor-pointer'
-                             onClick={() => setVibrateOn(!vibrateOn)}>
-                            <img 
-                            src={vibratePic} 
-                            alt="VibrateButton" 
-                            className='cursor-pointer'
-                            />
-                            {!vibrateOn && (
-                            <div className="absolute  bg-amber-400 pt-px top-1/2 left-1/2 w-full border-t-4 border-red-500 rotate-45 -translate-x-8 -translate-y-6"></div>
-                            )}
-                        </div>
-                        
-                    </div>
-                
-               </div>
-                
-            </div>
-            }
 
     </div>
   );
