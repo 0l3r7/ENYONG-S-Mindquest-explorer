@@ -72,7 +72,7 @@ function Home() {
         <div className="flex justify-center mb-2 ">
             <div className="flex flex-row items-center gap-4">
                 
-                <div className='flex flex-row mb-5'>
+                <div className='flex flex-row mb-5 cursor-pointer'>
                     {/* Score button */}
                     <img
                     src={scorePic}
