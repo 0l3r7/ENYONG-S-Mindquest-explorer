@@ -2,9 +2,9 @@ import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from './home/Home';
 import Settings from './home/settingPage/Setting.jsx';
-import About from './home/aboutPage/About.jsx'
+import About from './home/aboutPage/about.jsx'
 import Account from './home/accountPage/account.jsx';
-
+import DailyG from './home/DailyGoals/dailyGoals.jsx'
 function App() {
   const location = useLocation();
   const state = location.state;
@@ -17,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />      {/* Fallback */}
         <Route path="/setting" element={<Settings />} /> {/* Fallback */}
         <Route path="/account" element={<Account />} />
+        <Route path="/dailyGoals" element={<DailyG />} />
       </Routes>
 
       {/* Modal route */}
@@ -26,6 +27,7 @@ function App() {
            <Route path="/account" element={<Account />} />
            <Route path="/about" element={<About />} />
           <Route path="/setting" element={<Settings />} />
+          <Route path="/dailyGoals" element={<DailyG />} />
           
         </Routes>
       )}
