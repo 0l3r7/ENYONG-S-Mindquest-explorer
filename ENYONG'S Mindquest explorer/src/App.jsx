@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from './home/Home';
-import Settings from './home/settingPage/setting.jsx';
-import About from './home/aboutPage/about.jsx'
-import Account from './home/accountPage/account.jsx'
+import Settings from './home/settingPage/Setting.jsx';
+import About from './home/aboutPage/About.jsx'
+import Account from './home/accountPage/account.jsx';
 
 function App() {
   const location = useLocation();
