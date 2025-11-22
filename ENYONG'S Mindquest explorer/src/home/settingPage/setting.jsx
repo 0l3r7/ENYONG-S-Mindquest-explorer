@@ -40,7 +40,7 @@ function Setting() {
             <img src={soundPic} alt="SoundButton" />
             {!soundOn && (
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-1 mb-11 border-amber-400 border-2 p-px h-[60px] bg-red-600 rotate-45"></div>
+                <div className="w-1 mb-11 border-amber-400 border-2 p-px h-[60px] bg-red-600 rotate-45"></div> {/* off icon slash harang basta */}
               </div>
             )}
           </div>
