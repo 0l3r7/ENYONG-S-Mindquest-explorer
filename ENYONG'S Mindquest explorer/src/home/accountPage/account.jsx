@@ -5,7 +5,7 @@ import profilePic from '../../PIC/profile.png'
 import editPic from '../../ButtonPIC/edit.png'
 import { Link,  } from "react-router-dom";
 
-function account() {
+function Account() {
 
  const [name, setName] = useState("Juan Dela Cruz")
  const [pnumber, setPnumber] = useState("09*********")
@@ -130,7 +130,7 @@ function account() {
               type="text" 
               value={school} 
               disabled ={isDisabled}
-              onChange={(e) => setLrn(e.target.value)}
+              onChange={(e) => setSchool(e.target.value)}
               className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400'       
             />        
           </form>
@@ -144,4 +144,4 @@ function account() {
   )
 }
 
-export default account
+export default Account
