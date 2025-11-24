@@ -134,11 +134,20 @@ function Account() {
               className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400'       
             />        
           </form>
+
+          
+
         </div>
       </div>
 
 
       </div>
+      {/*Log out*/}
+          <div className='flex justify-center items-center    m-20'>
+            <img 
+            src={LogoutPic} 
+            alt="Log Out" />
+          </div>
 
     </div>
   )

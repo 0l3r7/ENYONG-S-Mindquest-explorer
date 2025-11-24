@@ -113,6 +113,7 @@ function Home() {
                     src={plusPic}
                     alt="plus"
                     className="w-8 h-8 mt-1 cursor-pointer"
+                    onClick={() => navigate("/dailyGoals", { state: { backgroundLocation: location } })}
                 />
                 </div>
 
