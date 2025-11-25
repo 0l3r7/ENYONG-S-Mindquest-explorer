@@ -6,7 +6,7 @@ import About from './home/aboutPage/about.jsx'
 import Account from './home/accountPage/account.jsx';
 import DailyG from './home/DailyGoals/dailyGoals.jsx'
 function App() {
-  const location = useLocation();
+  const location = useLocation(); 
   const state = location.state;
 
   return (
