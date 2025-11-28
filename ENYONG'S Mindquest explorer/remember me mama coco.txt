@@ -1,4 +1,4 @@
-cd "D:\ENYONG-S-Mindquest-explorer-main\ENYONG'S Mindquest explorer"
+cd "D:\ENYONG-S-Mindquest-explorer\ENYONG'S Mindquest explorer"
 <<<<<<< HEAD
  npm install
  npm run dev
