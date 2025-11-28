@@ -4,7 +4,8 @@ import Home from './home/Home';
 import Settings from './home/settingPage/Setting.jsx';
 import About from './home/aboutPage/about.jsx'
 import Account from './home/accountPage/account.jsx';
-import DailyG from './home/DailyGoals/dailyGoals.jsx'
+import DailyG from './home/DailyGoals/dailyGoals.jsx';
+import MathCTG from './Game/Categories/Math/MathCategory.jsx'
 function App() {
   const location = useLocation(); 
   const state = location.state;
@@ -18,6 +19,7 @@ function App() {
         <Route path="/setting" element={<Settings />} /> {/* Fallback */}
         <Route path="/account" element={<Account />} />
         <Route path="/dailyGoals" element={<DailyG />} />
+        <Route path="/math" element={<MathCTG />} />
       </Routes>
 
       {/* Modal route */}
@@ -28,6 +30,7 @@ function App() {
            <Route path="/about" element={<About />} />
           <Route path="/setting" element={<Settings />} />
           <Route path="/dailyGoals" element={<DailyG />} />
+          <Route path="/math" element={<MathCTG />} />
           
         </Routes>
       )}
