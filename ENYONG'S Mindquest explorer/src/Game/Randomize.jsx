@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import shrek from './Categories/CategoriesLogo/shrek.jpg'
+import kween from '../PIC/kween.png'
 
 function Randomize() {
   const navigate = useNavigate();
@@ -22,14 +22,22 @@ function Randomize() {
     const timer = setTimeout(() => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
       navigate(randomPage);
-    }, 1500); // 1.5 sec delay (optional)
+    }, 300); // 1.5 sec delay (optional)
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-        <img src= {shrek} alt="" />
+ <div  className="
+        fixed inset-0
+        bg-[#081E41]
+        animate-fade-in
+        flex flex-col
+        items-center
+        justify-center
+        p-3
+      ">
+        <img src={kween} alt="" />
     </div>
   );
 }
