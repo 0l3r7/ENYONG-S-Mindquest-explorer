@@ -138,10 +138,12 @@ function Home() {
              />
 
              {/* Play Button */}
-             <Link to="/math">
-             <button className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl w-[191px] h-[52px]  shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] cursor-pointer">
+             
+             <button 
+             onClick={() => navigate("/randomize")}
+             className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl w-[191px] h-[52px]  shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] cursor-pointer">
               PLAY
-            </button></Link>
+            </button>
 
         </div>
 
