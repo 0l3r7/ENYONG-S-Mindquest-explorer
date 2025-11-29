@@ -15,6 +15,8 @@ import ApCTG from './Game/Categories/AralingPanlipunan/AralingPanlipunan.jsx'
 import EngCTG from './Game/Categories/English/EnglishCategory.jsx'
 import MusicArtCTG from './Game/Categories/MusicAndArt/MusicAndArt.jsx'
 import PeAndHealthCTG  from './Game/Categories/PhysicalEducationAndHealth/PeAndHealth.jsx';
+import GmrcCTG from './Game/Categories/GMRC/GMRC.jsx'
+import TleCTG from './Game/Categories/TLE/TLE.jsx';
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <Route path="/account" element={<Account />} />
         <Route path="/dailyGoals" element={<DailyG />} />
         
+        
 
          {/* RANDOMIZE ROUTE SUBJECTS */}
         <Route path="/randomize" element={<Randomize />} />
@@ -41,6 +44,8 @@ function App() {
         <Route path="/aralingpanlipunan" element={<ApCTG />} />
         <Route path="/musicart" element={<MusicArtCTG />} />
         <Route path="/pehealth" element={<PeAndHealthCTG/>} />
+        <Route path="/gmrc" element={<GmrcCTG/>} />
+        <Route path="/tle" element={<TleCTG/>} />
       </Routes>
 
       {/* Modal route */}
@@ -61,6 +66,8 @@ function App() {
           <Route path="/aralingpanlipunan" element={<ApCTG />} />
           <Route path="/musicart" element={<MusicArtCTG />} />
           <Route path="/pehealth" element={<PeAndHealthCTG/>} />
+          <Route path="/gmrc" element={<GmrcCTG/>} />
+          <Route path="/tle" element={<TleCTG/>} />
           
         </Routes>
       )}

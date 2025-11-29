@@ -14,7 +14,10 @@ function Randomize() {
         "/english",
         "/aralingpanlipunan", 
         "/musicart",
-        "/pehealth" ];
+        "/pehealth",
+        "/gmrc",
+        "/tle"
+      ];
 
     const timer = setTimeout(() => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
