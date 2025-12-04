@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import kween from '../PIC/kween.png'
+
 
 function Randomize() {
   const navigate = useNavigate();
@@ -9,14 +9,17 @@ function Randomize() {
     // list of categories to choose from
     const pages = [
         "/science", 
-        "/math", 
+         "/science",
+          "/science",
+           "/science",
+        {/* "/math", 
         "/filipino", 
         "/english",
         "/aralingpanlipunan", 
         "/musicart",
         "/pehealth",
         "/gmrc",
-        "/tle"
+        "/tle"*/}
       ];
 
     const timer = setTimeout(() => {
@@ -37,7 +40,7 @@ function Randomize() {
         justify-center
         p-3
       ">
-        <img src={kween} alt="" />
+
     </div>
   );
 }

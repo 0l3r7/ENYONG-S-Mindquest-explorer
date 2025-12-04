@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 
+
 import infoPic from '../ButtonPIC/info.png';
 import accPic from '../ButtonPIC/acc.png';
 import settingPic from '../ButtonPIC/setting.png';
@@ -33,7 +34,7 @@ function Home() {
   return (
     <div className="min-h-screen w-full max-w-full overflow-hidden p-5 flex flex-col items-center gap-5 relative z-0">
 
- 
+       
         {/* Buttons row */}
         <div className="flex flex-row justify-between w-full  items-start">
            

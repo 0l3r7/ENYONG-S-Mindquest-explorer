@@ -19,6 +19,8 @@ import GmrcCTG from './Game/Categories/GMRC/GMRC.jsx'
 import TleCTG from './Game/Categories/TLE/TLE.jsx';
 
 
+import ScinceQuiz from './Game/Categories/Science/ScinceQuiz.jsx';
+
 function App() {
   const location = useLocation(); 
   const state = location.state;
@@ -46,7 +48,12 @@ function App() {
         <Route path="/pehealth" element={<PeAndHealthCTG/>} />
         <Route path="/gmrc" element={<GmrcCTG/>} />
         <Route path="/tle" element={<TleCTG/>} />
+
+        <Route path="/science_quiz" element={<ScinceQuiz/>} />
       </Routes>
+
+
+
 
       {/* Modal route */}
       {state?.backgroundLocation && (
@@ -68,6 +75,7 @@ function App() {
           <Route path="/pehealth" element={<PeAndHealthCTG/>} />
           <Route path="/gmrc" element={<GmrcCTG/>} />
           <Route path="/tle" element={<TleCTG/>} />
+          <Route path="/science_quiz" element={<ScinceQuiz/>} />
           
         </Routes>
       )}
