@@ -25,7 +25,7 @@ function Randomize() {
     const timer = setTimeout(() => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
       navigate(randomPage);
-    }, 300); // 1.5 sec delay (optional)
+    }, 100); // 1.5 sec delay (optional)
 
     return () => clearTimeout(timer);
   }, [navigate]);
