@@ -14,6 +14,7 @@ import plusPic from '../PIC/plus icon.png'
 import depedPic from '../PIC/DepEd.png'
 import minigamepic from '../PIC/MiniGameLogo.png'
 import playPic from '../ButtonPIC/PlayBtn.png'
+import MaharlikaPic from '../ButtonPIC/Maharlika.png'
 
 
 function Home() {
@@ -27,7 +28,9 @@ function Home() {
     const [showPartnerBtn, setShowPartnerBtn] = useState(false); //play with player
     const [showEarnCoinBtn, setShowEarnCoinBtn] = useState(false); //Earn  coin
     const [showLevelQuarterBtn, setShowLevelQuarterBtn] = useState(false);// Level & quarter
-
+    const [showCoin, setShowCoin] = useState("10");// coins
+    const [showRank, setShowRank] = useState("123");// Ranking
+    const [showLevel, setShowLevel] = useState("Maharlika");// Level or maharlika ahaha anagas
 
 
     
@@ -71,9 +74,11 @@ function Home() {
 
         {/* Button Second Row */}
         <div className="flex justify-center mb-2 ">
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row  gap-4">
                 
-                <div className='flex flex-row mb-5 cursor-pointer'>
+                 {/* Ranking and Maharlika */}
+                <div className='flex flex-col justify-center items-center'>
+                    <div className='flex flex-row  cursor-pointer'>
                     {/* Score button */}
                     <img
                     src={scorePic}
@@ -83,9 +88,24 @@ function Home() {
 
                     {/* Score placeholder */}
                     <h1 className="text-xl px-7 border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
-                    123
+                    {showRank}
                     </h1>
 
+                    </div>
+                                        <div className='flex flex-row mb-5 cursor-pointer'>
+                    {/* maharlika */}
+                    <img
+                    src={MaharlikaPic}
+                    alt="score"
+                    className="w-10 h-10"
+                    />
+
+                    {/* Maharlika placeholder */}
+                    <h1 className="text-sm px-2 p-1  text-center border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
+                    {showLevel}
+                    </h1>
+
+                    </div>
                 </div>
                 
                 {/* Earth button */}
@@ -106,7 +126,7 @@ function Home() {
 
                 {/* Number */}
                 <h1 className="font-LG text-white text-xl">
-                    10
+                    {showCoin}
                 </h1>
 
                 {/* Plus icon */}
