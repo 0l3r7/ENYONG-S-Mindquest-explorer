@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import ScienceBG from './Sciencebackground/ScienceBG.png'
+import React,{useState} from 'react'
+import AralingPanlipunanBG from './AralingPanlipunanbackground/AralingPanlipunanBG.png';
 import ReturnPic from '../../../ButtonPIC/returnBtn.png'
 import settingPic from '../../../ButtonPIC/setting.png';
 import coinPic from '../../../PIC/coin.png'
@@ -9,39 +9,37 @@ import QuizCard from '../../../PIC/QuizCard.png'
 
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-
-function ScinceQuiz() {
+function AralingPanlipunanQuiz() {
 
 // ----------------------------
   // State variables
   // ----------------------------
-  const [subject, setSubject] = useState("SCIENCE");        // Current quiz subject
+  const [subject, setSubject] = useState("ARALING PANLIPUNAN");        // Current quiz subject
   const [coin, setCoin] = useState("500");                 // User's coin balance
   const [difficulity, setDifficulity] = useState("EASY");   // Quiz difficulty level
   const [hint, setHint] = useState("10");                  // Number of available hints
 
   const [questionNumber, setQuestionNumber] = useState("1"); // Current question number
-  const [question, setQuestion] = useState("Which planet in the Solar System is the smallest?"); // Current question text
-  const [choiceA, setChoiceA] = useState("Pluto ");         // Choice A text
-  const [choiceB, setChoiceB] = useState("Mercury");       // Choice B text
-  const [choiceC, setChoiceC] = useState("Earth");         // Choice C text
-  const [choiceD, setChoiceD] = useState("Mars");          // Choice D text
+  const [question, setQuestion] = useState("ARALING PANLIPUNAN SUBJECT QUESTION"); // Current question text
+  const [choiceA, setChoiceA] = useState("Choice A ");         // Choice A text
+  const [choiceB, setChoiceB] = useState("Choice B");       // Choice B text
+  const [choiceC, setChoiceC] = useState("Choice C");         // Choice C text
+  const [choiceD, setChoiceD] = useState("Choice D");            // Choice D text
 
   // ----------------------------
   // Navigation hooks
   // ----------------------------
   const navigate = useNavigate(); // Programmatic navigation
   const location = useLocation(); // Get current route info (for modals or background state)
-
   return (
-
     // ----------------------------
     // Root container and Background
     // ----------------------------
     <div
-      className='w-[300px]l min-h-screen bg-cover bg-center bg-no-repeat p-6 item-center'
-      style={{backgroundImage:`url(${ScienceBG})`}}
-      >
+    className='w-[300px]l min-h-screen bg-cover bg-center bg-no-repeat p-6 item-center'
+    style={{backgroundImage:`url(${AralingPanlipunanBG})`}}
+    >
+            
             
       {/* ----------------------------
           Top navigation: Return & Settings
@@ -182,6 +180,7 @@ function ScinceQuiz() {
             </div>
 
 
+
         {/* ----------------------------
             Choices section
         ---------------------------- */}
@@ -300,12 +299,10 @@ function ScinceQuiz() {
             </div>
 
           </div>
-
-        </div>
+      </div>
 
     </div>
-
   )
 }
 
-export default ScinceQuiz
+export default AralingPanlipunanQuiz

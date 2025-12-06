@@ -20,6 +20,8 @@ import TleCTG from './Game/Categories/TLE/TLE.jsx';
 
 
 import ScinceQuiz from './Game/Categories/Science/ScinceQuiz.jsx';
+import FilipinoQuiz from './Game/Categories/Filipino/FilipinoQuiz.jsx';
+import AralingPanlipunanQuiz from './Game/Categories/AralingPanlipunan/AralingPanlipunanQuiz.jsx';
 
 function App() {
   const location = useLocation(); 
@@ -50,6 +52,8 @@ function App() {
         <Route path="/tle" element={<TleCTG/>} />
 
         <Route path="/science_quiz" element={<ScinceQuiz/>} />
+        <Route path="/filipino_quiz" element={<FilipinoQuiz/>} />
+        <Route path="/aralingpanlipunan_quiz" element={<AralingPanlipunanQuiz/>} />
       </Routes>
 
 
@@ -61,8 +65,9 @@ function App() {
            <Route path="/home" element={<Home />} />
            <Route path="/account" element={<Account />} />
            <Route path="/about" element={<About />} />
-            <Route path="/setting" element={<Settings />} />
+          <Route path="/setting" element={<Settings />} />
            <Route path="/dailyGoals" element={<DailyG />} />
+
 
             {/* RANDOMIZE ROUTE SUBJECTS */}
           <Route path="/randomize" element={<Randomize />} />
@@ -76,6 +81,8 @@ function App() {
           <Route path="/gmrc" element={<GmrcCTG/>} />
           <Route path="/tle" element={<TleCTG/>} />
           <Route path="/science_quiz" element={<ScinceQuiz/>} />
+          <Route path="/filipino_quiz" element={<FilipinoQuiz/>} />
+          <Route path="/aralingpanlipunan_quiz" element={<AralingPanlipunanQuiz/>} />
           
         </Routes>
       )}

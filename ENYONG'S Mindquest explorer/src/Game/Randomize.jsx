@@ -8,23 +8,21 @@ function Randomize() {
   useEffect(() => {
     // list of categories to choose from
     const pages = [
-        "/science", 
-         "/science",
-          "/science",
-           "/science",
-        {/* "/math", 
-        "/filipino", 
-        "/english",
-        "/aralingpanlipunan", 
-        "/musicart",
-        "/pehealth",
-        "/gmrc",
-        "/tle"*/}
+
+      "/science",
+      "/filipino",
+      "/aralingpanlipunan",
+      // "/math",
+      // "/english", 
+      // "/musicart",
+      // "/pehealth",
+      // "/gmrc",
+      // "/tle"
       ];
 
     const timer = setTimeout(() => {
       const randomPage = pages[Math.floor(Math.random() * pages.length)];
-      navigate(randomPage);
+      if (randomPage) navigate(randomPage);
     }, 100); // 1.5 sec delay (optional)
 
     return () => clearTimeout(timer);
