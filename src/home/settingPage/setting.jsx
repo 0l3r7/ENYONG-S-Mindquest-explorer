@@ -24,7 +24,7 @@ function Setting() {
           <img
             src={closePic}
             alt="CloseButton"
-            className="absolute right-4 cursor-pointer"
+            className="absolute right-4 cursor-pointer active:scale-95"
             onClick={() => navigate(-1)} // closes modal and goes back to Home
           />
         </div>
@@ -37,7 +37,7 @@ function Setting() {
             className="relative cursor-pointer"
             onClick={() => setSoundOn(!soundOn)}
           >
-            <img src={soundPic} alt="SoundButton" />
+            <img src={soundPic} alt="SoundButton" className='active:scale-95'/>
             {!soundOn && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-1 mb-11 border-amber-400 border-2 p-px h-[60px] bg-red-600 rotate-45"></div> {/* off icon slash harang basta */}
@@ -50,7 +50,7 @@ function Setting() {
             className="relative cursor-pointer"
             onClick={() => setMusicOn(!musicOn)}
           >
-            <img src={musicPic} alt="MusicButton" />
+            <img src={musicPic} alt="MusicButton" className='active:scale-95' />
             {!musicOn && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-1 mb-11 border-amber-400 border-2 p-px h-[60px] bg-red-600 rotate-45"></div>
@@ -63,7 +63,7 @@ function Setting() {
             className="relative cursor-pointer"
             onClick={() => setVibrateOn(!vibrateOn)}
           >
-            <img src={vibratePic} alt="VibrateButton" />
+            <img src={vibratePic} alt="VibrateButton" className='active:scale-95' />
             {!vibrateOn && (
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-1 mb-11 border-amber-400 border-2 p-px h-[60px] bg-red-600 rotate-45"></div>

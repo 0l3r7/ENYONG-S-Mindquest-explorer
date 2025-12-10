@@ -30,7 +30,7 @@ function Account() {
              <img 
               src={ReturnPic} 
               alt="" 
-              className='w-[50px] h-12'/>
+              className='w-[50px] h-12 active:scale-95'/>
            </Link>
       </div>
 
@@ -77,14 +77,14 @@ function Account() {
               value={pnumber} 
               disabled ={isDisabled}
               onChange={(e) => setPnumber(e.target.value)}
-              className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400'       
+              className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400 active:scale-95'       
             />        
           </form>
            <img 
             src={editPic} 
             alt="" 
             onClick={OnInput}
-            className='w-[23px] mt-5 cursor-pointer absolute right-0  h-[23px]'/>    
+            className='w-[23px] mt-5 cursor-pointer absolute right-0  h-[23px] active:scale-95'/>    
         </div>
 
         {/* LRN */}
@@ -96,7 +96,7 @@ function Account() {
               value={lrn} 
               disabled ={isDisabled}
               onChange={(e) => setLrn(e.target.value)}
-              className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400'       
+              className='border-b-2 text-xl focus:outline-none focus:ring-2 focus:ring-blue-400 '       
             />        
           </form>
         </div>
@@ -119,7 +119,7 @@ function Account() {
               src={editPic} 
               alt="" 
               onClick={OnInput}
-              className='w-[23px] mt-5 cursor-pointer absolute right-0 h-[23px]'/>    
+              className='w-[23px] mt-5 cursor-pointer absolute right-0 h-[23px] active:scale-95'/>    
         </div>
 
          {/* School */}
@@ -146,7 +146,8 @@ function Account() {
           <div className='flex justify-center items-center    m-20'>
             <img 
             src={LogoutPic} 
-            alt="Log Out" />
+            alt="Log Out" 
+            className='active:scale-95'/>
           </div>
 
     </div>

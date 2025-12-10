@@ -45,7 +45,7 @@ function Home() {
             <img
             src={infoPic}
             alt="info"
-            className="w-[50px] h-12 cursor-pointer" // about button size to
+            className="w-[50px] h-12 cursor-pointer active:scale-95" // about button size to
             onClick={() => navigate("/about", { state: { backgroundLocation: location } })}
             />
            
@@ -57,7 +57,7 @@ function Home() {
                     <img
                         src={accPic}
                         alt="account"
-                        className="w-[50px] h-12 cursor-pointer" // account button size to
+                        className="w-[50px] h-12 cursor-pointer active:scale-95" // account button size to
                     />
                 </Link>
 
@@ -65,7 +65,7 @@ function Home() {
                     <img
                         src={settingPic}
                         alt="settings"
-                        className="w-[50px] h-12 cursor-pointer" // setting button size
+                        className="w-[50px] h-12 cursor-pointer active:scale-95" // setting button size
                         onClick={() => navigate("/setting", { state: { backgroundLocation: location } })}
                     />
             
@@ -77,13 +77,13 @@ function Home() {
             <div className="flex flex-row  gap-4">
                 
                  {/* Ranking and Maharlika */}
-                <div className='flex flex-col justify-center items-center'>
-                    <div className='flex flex-row  cursor-pointer'>
+                <div className='flex flex-col justify-center items-center '>
+                    <div className='flex flex-row  cursor-pointer active:scale-95'>
                     {/* Score button */}
                     <img
                     src={scorePic}
                     alt="score"
-                    className="w-10 h-10"
+                    className="w-10 h-10 "
                     />
 
                     {/* Score placeholder */}
@@ -92,7 +92,8 @@ function Home() {
                     </h1>
 
                     </div>
-                                        <div className='flex flex-row mb-5 cursor-pointer'>
+
+                <div className='flex flex-row mb-5 cursor-pointer active:scale-95'>
                     {/* maharlika */}
                     <img
                     src={MaharlikaPic}
@@ -112,7 +113,7 @@ function Home() {
                 <img
                 src={earthPic}
                 alt="earth"
-                className="w-[94px] h-[94px] "
+                className="w-[94px] h-[94px] active:scale-95 "
                 />
 
                 {/* Coin button */}
@@ -133,7 +134,7 @@ function Home() {
                 <img
                     src={plusPic}
                     alt="plus"
-                    className="w-8 h-8 mt-1 cursor-pointer"
+                    className="w-8 h-8 mt-1 cursor-pointer active:scale-95"
                     onClick={() => navigate("/dailyGoals", { state: { backgroundLocation: location } })}
                 />
                 </div>
@@ -162,14 +163,16 @@ function Home() {
              
              <button 
              onClick={() => navigate("/randomize")}
-             className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl w-[191px] h-[52px]  shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] cursor-pointer">
+             className="bg-[#30AD17] rounded-2xl font-LG text-white text-4xl 
+                        w-[191px] h-[52px]  shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] cursor-pointer active:scale-95">
               PLAY
             </button>
 
         </div>
 
         {/* Mini Games*/}
-        <div className='bg-[#021934] flex justify-center items-center flex-col rounded-3xl p-2 w-[373px] h-auto gap-2'>
+        <div className='bg-[#021934] flex justify-center items-center flex-col 
+                        rounded-3xl p-2 w-[373px] h-auto gap-2'>
             {/* Mini Game Logo */}
            <img
             src={minigamepic}
@@ -186,7 +189,7 @@ function Home() {
                                     setShowLevelQuarterBtn(false)}}  
                                     // ec CLOSE when pwp is clicked
                     className={`
-                        text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl transition cursor-pointer
+                        text-sm px-6 p-1 rounded-tl-2xl rounded-bl-2xl transition cursor-pointer active:scale-95
                         ${showPartnerBtn 
                         ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
                         : "bg-[#0A5090]"
@@ -202,7 +205,7 @@ function Home() {
                                      setShowLevelQuarterBtn(false) }}
                                      // PWP CLOSE when EC is clicked
                     className={`
-                        text-sm px-10 p-1 transition cursor-pointer
+                        text-sm px-10 p-1 transition cursor-pointer active:scale-95
                         ${showEarnCoinBtn 
                         ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
                         : "bg-[#0A5090]"
@@ -218,7 +221,7 @@ function Home() {
                                     setShowEarnCoinBtn(false) }}
                                      // PWP CLOSE when EC is clicked
                     className={`
-                         text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl transition cursor-pointer
+                         text-sm px-6 p-1 rounded-tr-2xl rounded-br-2xl transition cursor-pointer active:scale-95
                         ${showLevelQuarterBtn 
                         ? "bg-green-600 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)]"// this palit the kulay ahahah
                         : "bg-[#0A5090]"
@@ -239,7 +242,7 @@ function Home() {
                      <img
                         src={playPic} 
                         alt="play1v1btn"
-                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        className="w-[50px] h-[49px] cursor-pointer active:scale-95" // play button size to
                         />
 
                 </div>
@@ -255,7 +258,7 @@ function Home() {
                      <img
                         src={playPic} 
                         alt="playECbtn"
-                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        className="w-[50px] h-[49px] cursor-pointer active:scale-95" // play button size to
                         />
 
                 </div>
@@ -271,7 +274,7 @@ function Home() {
                      <img
                         src={playPic} 
                         alt="playLAQbtn"
-                        className="w-[50px] h-[49px] cursor-pointer" // play button size to
+                        className="w-[50px] h-[49px] cursor-pointer active:scale-95" // play button size to
                         />
 
                 </div>

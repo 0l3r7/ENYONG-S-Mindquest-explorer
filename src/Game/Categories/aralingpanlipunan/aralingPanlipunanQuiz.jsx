@@ -51,14 +51,14 @@ function AralingPanlipunanQuiz() {
               <img 
                 src={ReturnPic} 
                 alt="" 
-                className='w-[300px]px] h-12'/>
+                className='w-[300px]px] h-12 active:scale-95'/>
             </Link>
 
           {/*  Settings buttons */}
               <img
               src={settingPic}
               alt="settings"
-              className="w-[50px] h-12 cursor-pointer" // setting button size
+              className="w-[50px] h-12 cursor-pointer active:scale-95" // setting button size
               onClick={() => navigate("/setting", { state: { backgroundLocation: location } })}/>
         </div>
 
@@ -111,14 +111,14 @@ function AralingPanlipunanQuiz() {
                         <img
                             src={plusPic}
                             alt="plus"
-                            className="w-8 h-8 mt-1 cursor-pointer"
+                            className="w-8 h-8 mt-1 cursor-pointer active:scale-95"
                             onClick={() => navigate("/dailyGoals", { state: { backgroundLocation: location } })}
                         />
                 </div>
 
               {/* Hint button */}
               <div className='flex justify-end cursor-pointer'>
-                <div className="flex p-0 flex-row justify-center bg-[#299C2F] shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] 
+                <div className="flex p-0 flex-row justify-center active:scale-95 bg-[#299C2F] shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] 
                                 border-2 rounded-full border-white px-1 items-center  mb-5 w-auto ">
                         {/* Coin image */}
                         <img
@@ -188,7 +188,7 @@ function AralingPanlipunanQuiz() {
           <div className="flex flex-col justify-start space-y-2 mx-auto  ">
             
             {/* Choice A */}
-             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto"
+             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto  active:scale-95"
                 onClick={() => navigate("/nextquestion", { state: { backgroundLocation: location } })}>
 
                 {/* Rounded label */}
@@ -217,7 +217,7 @@ function AralingPanlipunanQuiz() {
             </div>
 
             {/* Choice B */}
-             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto">
+             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto active:scale-95">
 
                 {/* Rounded label */}
                   <div className="rounded-full h-12 flex items-center px-4 bg-[#004C99] 
@@ -245,7 +245,7 @@ function AralingPanlipunanQuiz() {
             </div>
 
             {/* Choice C */}
-             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto">
+             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto active:scale-95">
 
                 {/* Rounded label */}
                   <div className="rounded-full h-12 flex items-center px-4 bg-[#004C99] 
@@ -273,7 +273,7 @@ function AralingPanlipunanQuiz() {
             </div>
 
             {/* Choice D */}
-             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto">
+             <div className="flex flex-row items-center justify-start w-full max-w-[400px] mx-auto active:scale-95">
 
                 {/* Rounded label */}
                   <div className="rounded-full h-12 flex items-center px-4 bg-[#004C99] 
