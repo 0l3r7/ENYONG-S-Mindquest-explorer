@@ -5,6 +5,7 @@ import HomeBtn from '../../ButtonPIC/HomeBtn.png'
 import coinPic from '../../PIC/coin.png'
 import plusPic from '../../PIC/plus icon.png'
 import NextQuestionBtn from '../../ButtonPIC/NextQuestionBtn.png'
+import SpinningBG from '../../Game/nextquestion/spinningBG/SpinningBG.png'
 
 
 
@@ -17,12 +18,12 @@ const [rewardCoin, setrewardCoin] = useState("3")
     <div 
     className="fixed inset-0 flex flex-col items-center justify-center bg-black/50 z-50">
         <div className="bg-[#084E99] border-2 border-white rounded-4xl 
-                        w-[396px] h-auto flex flex-col p-4 space-y-5">
+                        w-[396px] h-auto flex flex-col p-4 ">
 
             {/* ----------------------------
                 First layer... Home and Coin
             ---------------------------- */}
-            <div className='flex justify-between'>
+            <div className='flex justify-between pb-4'>
 
                 {/* Home button */}
                 <Link to={"/"}>
@@ -80,7 +81,14 @@ const [rewardCoin, setrewardCoin] = useState("3")
                 Spinning umbrella and
                 Right Answer
             ---------------------------- */}
-
+            <div>
+                <div>
+                    <img 
+                    src={SpinningBG}
+                    alt="Spinning BG"
+                    className='animate-spin [animation-duration:10s]' />
+                </div>
+            </div>
 
 
 
