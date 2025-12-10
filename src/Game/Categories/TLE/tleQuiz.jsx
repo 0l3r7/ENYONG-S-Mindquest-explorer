@@ -122,7 +122,7 @@ function TLEQuiz() {
 
               {/* Hint button */}
               <div className='flex justify-end cursor-pointer'>
-                <div className="flex p-0 flex-row justify-center active:scale-95 active:scale-95 bg-[#299C2F] shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] 
+                <div className="flex p-0 flex-row justify-center active:scale-95  bg-[#299C2F] shadow-[inset_0_0_10px_rgba(0,0,0,0.6)] 
                                 border-2 rounded-full border-white px-1 items-center  mb-5 w-auto ">
                         {/* Coin image */}
                         <img

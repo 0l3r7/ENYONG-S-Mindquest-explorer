@@ -6,6 +6,8 @@ import coinPic from '../../PIC/coin.png'
 import plusPic from '../../PIC/plus icon.png'
 import NextQuestionBtn from '../../ButtonPIC/NextQuestionBtn.png'
 
+
+
 function NextQuestion() {
 
 const [coin, setCoin] = useState("500");  
@@ -24,7 +26,8 @@ const [rewardCoin, setrewardCoin] = useState("3")
 
                 {/* Home button */}
                 <Link to={"/"}>
-                    <img src={HomeBtn} alt="" />
+                    <img src={HomeBtn} alt="" 
+                    className='active:scale-95'/>
                 </Link>
                 
                 {/* Coin button */}
@@ -45,7 +48,7 @@ const [rewardCoin, setrewardCoin] = useState("3")
                             <img
                                 src={plusPic}
                                 alt="plus"
-                                className="w-8 h-8 mt-1 cursor-pointer"
+                                className="w-8 h-8 mt-1 cursor-pointer active:scale-95"
                                 onClick={() => navigate("/dailyGoals", { state: { backgroundLocation: location } })}
                             />
                     </div>
@@ -90,7 +93,7 @@ const [rewardCoin, setrewardCoin] = useState("3")
                 <img 
                 src={NextQuestionBtn} 
                 alt="Next Question Button" 
-                className='cursor-pointer'/>
+                className='cursor-pointer active:scale-95'/>
             </div>
 
 
