@@ -78,20 +78,23 @@ function Home() {
                 
                  {/* Ranking and Maharlika */}
                 <div className='flex flex-col justify-center items-center '>
-                    <div className='flex flex-row  cursor-pointer active:scale-95'>
-                    {/* Score button */}
-                    <img
-                    src={scorePic}
-                    alt="score"
-                    className="w-10 h-10 "
-                    />
 
-                    {/* Score placeholder */}
-                    <h1 className="text-xl px-7 border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
-                    {showRank}
-                    </h1>
+                    <Link to={"/ranking"}>
+                        <div className='flex flex-row  cursor-pointer active:scale-95'>
+                        {/* Score button */}
+                        <img
+                        src={scorePic}
+                        alt="score"
+                        className="w-10 h-10 "
+                        />
 
-                    </div>
+                        {/* Score placeholder */}
+                        <h1 className="text-xl px-7 border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
+                        {showRank}
+                        </h1>
+
+                        </div>
+                    </Link>
 
                 <div className='flex flex-row mb-5 cursor-pointer active:scale-95'>
                     {/* maharlika */}
