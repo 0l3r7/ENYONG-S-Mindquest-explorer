@@ -18,11 +18,12 @@ function StudentRanking() {
     { rank: 7, name: "JUSTINE", level: "LVL 25", number: "0959" },
   ];
   return (
-    <div className="p-4 ">
+    <div className="p-4 overflow-x-hidden ">
       <div>
-        <div className="absolute -z-10 w-[648px] h-[596px] bg-[#103F80] 
+        <div className="absolute -z-10 w-[90vw] max-w-[648px] h-[596px] bg-[#103F80] 
             rounded-full top-[55%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         </div>
+
 
 
         <div>
