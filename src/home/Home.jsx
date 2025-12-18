@@ -96,21 +96,26 @@ function Home() {
                         </div>
                     </Link>
 
-                <div className='flex flex-row mb-5 cursor-pointer active:scale-95'>
-                    {/* maharlika */}
-                    <img
-                    src={MaharlikaPic}
-                    alt="score"
-                    className="w-10 h-10"
-                    />
+                <Link to={"/rank"}>
+                    <div className='flex flex-row mb-5 cursor-pointer active:scale-95'>
+                        {/* maharlika */}
+                        
+                            <img
+                            src={MaharlikaPic}
+                            alt="score"
+                            className="w-10 h-10"
+                            />
+                        
 
-                    {/* Maharlika placeholder */}
-                    <h1 className="text-sm px-2 p-1  text-center border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
-                    {showLevel}
-                    </h1>
+                        {/* Maharlika placeholder */}
+                        <h1 className="text-sm px-2 p-1  text-center border-t-2 border-r-2 border-b-2 border-[#999999] rounded-tr-full rounded-br-full  text-white mt-0.5 mb-1 font-LG">
+                        {showLevel}
+                        </h1>
 
                     </div>
+                </Link>
                 </div>
+                
                 
                 {/* Earth button */}
                 <img

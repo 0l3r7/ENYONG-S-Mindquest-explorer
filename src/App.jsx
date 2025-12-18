@@ -7,7 +7,8 @@ import Settings from './home/settingPage/Setting.jsx';
 import About from './home/aboutPage/about.jsx'
 import Account from './home/accountPage/account.jsx';
 import DailyG from './home/DailyGoals/dailyGoals.jsx';
-import Ranking from './home/ranking/studentRanking.jsx'
+import Ranking from './home/ranking/studentRanking.jsx';
+import Rank from './home/rank/rank.jsx'
 
 /* ===== GAME PAGES ===== */
 // Random subject selector
@@ -65,6 +66,7 @@ function App() {
         <Route path="/account" element={<Account />} />
         <Route path="/dailyGoals" element={<DailyG />} />
         <Route path="/ranking" element={<Ranking />} />
+        <Route path="/rank" element={<Rank />} />
 
         {/* RANDOM SUBJECT ROUTE */}
         <Route path="/randomize" element={<Randomize />} />
@@ -113,6 +115,7 @@ function App() {
           <Route path="/setting" element={<Settings />} />
           <Route path="/dailyGoals" element={<DailyG />} />
           <Route path="/ranking" element={<Ranking />} />
+          <Route path="/rank" element={<Rank />} />
 
           {/* RANDOM & CATEGORY ROUTES */}
           <Route path="/randomize" element={<Randomize />} />
