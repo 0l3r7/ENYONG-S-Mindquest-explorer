@@ -263,11 +263,13 @@ function Home() {
                 <div className=" w-[90%] rounded-xl p-3 flex flex-col gap-3 items-center justify-center " >
 
                     <h1 className='font-LG text-white text-center'>Answer fun questions to collect more coins and unlock rewards.</h1>
-                     <img
-                        src={playPic} 
-                        alt="playECbtn"
-                        className="w-[50px] h-[49px] cursor-pointer active:scale-95" // play button size to
-                        />
+                     <Link to={"/earnCoins"}>
+                        <img
+                            src={playPic} 
+                            alt="playECbtn"
+                            className="w-[50px] h-[49px] cursor-pointer active:scale-95" // play button size to
+                            />
+                    </Link>
 
                 </div>
             </div>

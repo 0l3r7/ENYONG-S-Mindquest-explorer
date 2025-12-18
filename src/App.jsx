@@ -9,6 +9,7 @@ import Account from './home/accountPage/account.jsx';
 import DailyG from './home/DailyGoals/dailyGoals.jsx';
 import Ranking from './home/ranking/studentRanking.jsx';
 import Rank from './home/rank/rank.jsx'
+import EarnCoins from './home/earnCoin/earnCoin.jsx'
 
 /* ===== GAME PAGES ===== */
 // Random subject selector
@@ -67,6 +68,7 @@ function App() {
         <Route path="/dailyGoals" element={<DailyG />} />
         <Route path="/ranking" element={<Ranking />} />
         <Route path="/rank" element={<Rank />} />
+        <Route path="/earnCoins" element={<EarnCoins />} />
 
         {/* RANDOM SUBJECT ROUTE */}
         <Route path="/randomize" element={<Randomize />} />
@@ -116,6 +118,7 @@ function App() {
           <Route path="/dailyGoals" element={<DailyG />} />
           <Route path="/ranking" element={<Ranking />} />
           <Route path="/rank" element={<Rank />} />
+          <Route path="/earnCoins" element={<EarnCoins />} />
 
           {/* RANDOM & CATEGORY ROUTES */}
           <Route path="/randomize" element={<Randomize />} />
